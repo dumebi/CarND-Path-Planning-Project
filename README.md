@@ -1,6 +1,18 @@
 # CarND-Path-Planning-Project
 Self-Driving Car Engineer Nanodegree Program
-   
+
+## Rubic Points
+
+### Files
+A new file was added 
+No changes were made in the cmake configuration. A new file was added [src/spline.h](https://github.com/dumebi/CarND-Path-Planning-Project/blob/master/scr/spline.h) the Cubic Spline interpolation implementation to use splines instead of polynomials.
+
+### Valid Trajectories
+![Training Image](https://raw.githubusercontent.com/dumebi/CarND-Path-Planning-Project/blob/master/path_train.png)
+
+
+
+
 ### Simulator.
 You can download the Term3 Simulator which contains the Path Planning Project from the [releases tab (https://github.com/udacity/self-driving-car-sim/releases/tag/T3_v1.2).
 
