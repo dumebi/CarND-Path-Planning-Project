@@ -252,10 +252,10 @@ int main() {
               car_s = end_path_s;
             }
 
-            // Prediction : Analysing other cars positions.
+            // Prediction.
             bool car_ahead = false;
             bool car_left = false;
-            bool car_righ = false;
+            bool car_right = false;
             for ( int i = 0; i < sensor_fusion.size(); i++ ) {
                 float d = sensor_fusion[i][6];
                 int car_lane = -1;
@@ -286,11 +286,11 @@ int main() {
                   car_left |= car_s - 30 < check_car_s && car_s + 30 > check_car_s;
                 } else if ( car_lane - lane == 1 ) {
                   // Car right
-                  car_righ |= car_s - 30 < check_car_s && car_s + 30 > check_car_s;
+                  car_right |= car_s - 30 < check_car_s && car_s + 30 > check_car_s;
                 }
             }
 
-            // Behavior : Let's see what to do.
+            // Behavior.
             double speed_diff = 0;
             const double MAX_SPEED = 49.5;
             const double MAX_ACC = .224;
@@ -298,7 +298,7 @@ int main() {
               if ( !car_left && lane > 0 ) {
                 // if there is no car left and there is a left lane.
                 lane--; // Change lane left.
-              } else if ( !car_righ && lane != 2 ){
+              } else if ( !car_right && lane != 2 ){
                 // if there is no car right and there is a right lane.
                 lane++; // Change lane right.
               } else {
@@ -306,7 +306,7 @@ int main() {
               }
             } else {
               if ( lane != 1 ) { // if we are not on the center lane.
-                if ( ( lane == 0 && !car_righ ) || ( lane == 2 && !car_left ) ) {
+                if ( ( lane == 0 && !car_right ) || ( lane == 2 && !car_left ) ) {
                   lane = 1; // Back to center.
                 }
               }
