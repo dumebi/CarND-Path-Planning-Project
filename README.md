@@ -5,10 +5,10 @@ Self-Driving Car Engineer Nanodegree Program
 
 ### Files
 A new file was added 
-No changes were made in the cmake configuration. A new file was added [src/spline.h](https://raw.githubusercontent.com/dumebi/CarND-Path-Planning-Project/blob/master/src/spline.h) the Cubic Spline interpolation implementation to use splines instead of polynomials.
+No changes were made in the cmake configuration. A new file was added [src/spline.h](https://raw.githubusercontent.com/dumebi/CarND-Path-Planning-Project/master/src/spline.h) the Cubic Spline interpolation implementation to use splines instead of polynomials.
 
 ### Valid Trajectories
-![Training Image](https://raw.githubusercontent.com/dumebi/CarND-Path-Planning-Project/blob/master/path_train.png)
+![Training Image](https://raw.githubusercontent.com/dumebi/CarND-Path-Planning-Project/master/path_train.png)
 
 
 
